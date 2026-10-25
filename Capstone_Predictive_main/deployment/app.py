@@ -13,12 +13,12 @@ This application predicts the likelihood of an engine failing based on its opera
 Enter the sensor data below to get a prediction.
 """)
 
-Engine_RPM     = st.number_input("Engine speed (RPM)", 250.0, 400.0, 298.0, 0.1)
-Lub_Oil_Pressure = st.number_input("Lubricant Oil Pressure(Kpa)", 250.0, 500.0, 324.0, 0.1)
-Fuel_Pressure = st.number_input("Fuel Pressure to engine(Kpa)", 250.0, 500.0, 324.0, 0.1)
-Coolant_Pressure    = st.number_input("Coolant oressure (kpa)", 250.0, 500.0, 324.0, 0.1)
-Lub_Oil_Temperature = st.number_input("Lubricant Oil Temperature (C)", 250.0, 500.0, 324.0, 0.1)
-Coolant_Temperature = st.number_input("Coolant Temperature (C)", 250.0, 500.0, 324.0, 0.1)
+Engine_RPM     = st.number_input("Engine speed (RPM)", 50, 4000, 50, 1)
+Lub_Oil_Pressure = st.number_input("Lubricant Oil Pressure(Kpa)", 0.0, 10.000, 0.0, 0.001)
+Fuel_Pressure = st.number_input("Fuel Pressure to engine(Kpa)", 0.0, 30.000, 0.0, 0.001)
+Coolant_Pressure    = st.number_input("Coolant oressure (kpa)", 0.0, 10.000, 0.0, 0.001)
+Lub_Oil_Temperature = st.number_input("Lubricant Oil Temperature (C)", 50.00, 100.00, 50.00, 0.01)
+Coolant_Temperature = st.number_input("Coolant Temperature (C)", 50.00, 100.00, 50.00, 0.01)
 
 input_data = pd.DataFrame([{
     "Engine rpm": Engine_RPM,
