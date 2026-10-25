@@ -91,7 +91,7 @@ with mlflow.start_run():
     })
 
     # Save the model
-    model_path = "tourism_project/deployment/best_tourism_model.joblib"
+    model_path = "Capstone_Predictive_main/deployment/best_predictive_failure_model.joblib"
     joblib.dump(best_model, model_path)
     print(f"Model saved to {model_path}")
 
