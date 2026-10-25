@@ -10,7 +10,7 @@ model = joblib.load(model_path)
 st.title("Engine Failure Prediction App")
 st.write("""
 This application predicts the likelihood of an engine failing based on its operational parameters.
-Enter the sensor and configuration data below to get a prediction.
+Enter the sensor data below to get a prediction.
 """)
 
 Engine_RPM     = st.number_input("Engine speed (RPM)", 250.0, 400.0, 298.0, 0.1)
@@ -21,12 +21,12 @@ Lub_Oil_Temperature = st.number_input("Lubricant Oil Temperature (C)", 250.0, 50
 Coolant_Temperature = st.number_input("Coolant Temperature (C)", 250.0, 500.0, 324.0, 0.1)
 
 input_data = pd.DataFrame([{
-    "Engine speed (RPM)": Engine_RPM,
-    "Lubricant Oil Pressure(Kpa)": Lub_Oil_Pressure,
-    "Fuel Pressure to engine(Kpa)": Fuel_Pressure,
-    "Coolant oressure (kpa)": Coolant_Pressure,
-    "Lubricant Oil Temperature (C)": Lub_Oil_Temperature,
-    "Coolant Temperature (C)": Coolant_Temperature,
+    "Engine rpm": Engine_RPM,
+    "Lub oil pressure": Lub_Oil_Pressure,
+    "Fuel pressure": Fuel_Pressure,
+    "Coolant pressure": Coolant_Pressure,
+    "lub oil temp": Lub_Oil_Temperature,
+    "Coolant temp": Coolant_Temperature,
 }])
 
 if st.button("Predict Failure"):
